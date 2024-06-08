@@ -1,7 +1,7 @@
 var = 'Hello World!'
 
 # fatiamento de str
-# [i:f:p]
+# [inicio : final : passo]
 
 # pega do indice até o final
 print(var[6:])
