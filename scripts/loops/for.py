@@ -1,16 +1,28 @@
-word = 'paralelepipedo'
+'''
+-> Usa o for quando sabe quantas vezes terá que executar
+o bloco de código
+-> Continue: pula para a próxima iteração
+-> Break: sai do laço
+'''
 
-for letter in word:
+name = 'Eduardo'
+
+for letter in name:
     print(letter)
 
-# De 0 a 9
-# range(10)
+print('*' * 10 + '\n')
 
-# De 1 a 10
-# range(1, 11)
+for i in range(21):
+    if i % 10 == 0:
+        print(f'Estou pulando o {i}...')
+        i += 1
+        continue
 
-# De 1 a 15 de 2 em 2
-# range(1, 15, 2)
+    if i % 2 == 0:
+        print(f'{i} é par')
+    else:
+        print(f'{i} é ímpar')  
 
-for x in range(1, 11):
-    print(x)
+    if i == 19:
+        print('Encerrando o laço aqui')
+        break  

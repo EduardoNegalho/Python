@@ -1,25 +1,30 @@
-# num = 1
+'''
+-> O loop while é usado quando não se sabe quantas iterações 
+terá que executar
+-> Deve sempre controlar o while para que não gere 
+um loop infinito
+-> Continue: pula para a próxima iteração
+-> Break: sai do laço
+'''
 
-# while num <= 10:
-#     if num % 2 == 0:
-#         print(f'{num} é par')
-#     else:
-#         print(f'{num} é ímpar')
+count = 1
 
-#     num += 1
+while count <= 100:
 
-# print('Encerrado...')
+    if count % 10 == 0:
+        print(f'Estou pulando o {count}...')
+        count += 1
+        continue
 
-amount_lines = 5
-amount_columns = 5
+    if count % 2 == 0:
+        print(f'{count} é par')
+    else:
+        print(f'{count} é ímpar')  
 
-line = 1
-
-while line <= amount_lines:
-    column = 1
-
-    while column <= amount_columns:
-        print(f'{line=} {column=}')
-        column += 1
+    if count == 99:
+        print('Encerrando o laço aqui')
+        break  
     
-    line += 1
+    count +=1
+else:
+    print('Fim do laço while')
